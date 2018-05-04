@@ -1,16 +1,8 @@
-﻿import constants from '../constants/constants';
+﻿import { combineReducers } from "redux";
+import CreateBoardReducer from "./createBoardReducer";
 
-const initialState = {
-    articles: []
-};
-
-const rootReducer = (state = initialState, action) => {
-    switch (action.type) {
-        case constants.ADD_ARTICLE:
-            return Object.assign({}, state, { articles: state.articles.concat(action.payload) });
-        default:           
-            return state;
-    }
-}
+const rootReducer = combineReducers({
+    createBoard: CreateBoardReducer,
+})
 
 export default rootReducer;

@@ -1,8 +1,8 @@
 ﻿import React from "react";
-import Link from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 const Title = () => (
-    <h2>Logo</h2>
+    <Link to="/"><h2 className="Logo">Logo</h2></Link>
 );
 
 export default Title;
